@@ -1,19 +1,38 @@
+```mermaid
 classDiagram
+
     class Resource {
-        <<abstract>>
         +uuid id
         +string name
-        +calculateRiskScore()*
+        +string status
+        +calculateRiskScore()
     }
+
     class PowerTool {
         +int voltage
         +calculateRiskScore()
     }
+
     class Vehicle {
         +int fuelLevel
         +calculateRiskScore()
     }
-    Resource <|-- PowerTool : Inheritance
-    Resource <|-- Vehicle : Inheritance
-    User "1" --o "*" Booking : Composition
-    Resource "1" --o "*" Booking : Composition
+
+    class User {
+        +uuid id
+        +string email
+        +int trustScore
+    }
+
+    class Booking {
+        +uuid id
+        +datetime startTime
+        +datetime endTime
+        +updateStatus(newStatus)
+    }
+
+    Resource <|-- PowerTool
+    Resource <|-- Vehicle
+    User "1" o-- "*" Booking
+    Resource "1" o-- "*" Booking
+```
