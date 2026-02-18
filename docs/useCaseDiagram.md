@@ -1,21 +1,24 @@
-useCaseDiagram
-    actor "Community Member" as M
-    actor "Volunteer Admin" as A
-    actor "Automated System" as S
+```mermaid
+flowchart LR
 
-    package "OmniShare API" {
-        usecase "Book Resource" as UC1
-        usecase "Verify Safety Badge" as UC2
-        usecase "Process Pickup/Return" as UC3
-        usecase "Audit Maintenance Logs" as UC4
-        usecase "Auto-Flag for Repair" as UC5
-    }
+    M[Community Member]
+    A[Volunteer Admin]
+    S[Automated System]
+
+    subgraph OmniShare_API
+        UC1((Book Resource))
+        UC2((Verify Safety Badge))
+        UC3((Process Pickup / Return))
+        UC4((Audit Maintenance Logs))
+        UC5((Auto-Flag for Repair))
+    end
 
     M --> UC1
     M --> UC3
-    UC1 ..> UC2 : <<include>>
-    
+    UC1 -.-> UC2
+
     A --> UC3
     A --> UC4
-    
+
     S --> UC5
+```
