@@ -5,11 +5,11 @@
 ## Project Documentation
 This repository contains the architectural design for Milestone 1:
 
-- [Project Vision & Scope](./idea.md)
-- [Use Case Diagram](./useCaseDiagram.md)
-- [ER Diagram (Database Schema)](./ErDiagram.md)
-- [Class Diagram (OOP Architecture)](./classDiagram.md)
-- [Sequence Diagram (Logic Flow)](./sequenceDiagram.md)
+- [Project Vision & Scope](./docs/idea.md)
+- [Use Case Diagram](./docs/useCaseDiagram.md)
+- [ER Diagram (Database Schema)](./docs/ErDiagram.md)
+- [Class Diagram (OOP Architecture)](./docs/classDiagram.md)
+- [Sequence Diagram (Logic Flow)](./docs/sequenceDiagram.md)
 
 ## Tech Stack
 - **Backend:** NestJS (Node.js/TypeScript)
